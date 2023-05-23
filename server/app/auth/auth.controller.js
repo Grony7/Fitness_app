@@ -1,56 +1,62 @@
+import { faker } from '@faker-js/faker'
+import { hash, verify } from 'argon2'
 import asyncHandler from 'express-async-handler'
 
-import { faker } from '@faker-js/faker'
 import { prisma } from '../prisma.js'
-import { hash } from 'argon2'
-
 import { UserFields } from '../utils/user.utils.js'
-import { generateToken } from './generate-token.js'
 
+import { generateToken } from './generate-token.js'
 
 // @desc    Auth user
 // @route   POST /api/auth/login
 // @access  Public
+export const authUser = asyncHandler(async (req, res) => {
+	const { email, password } = req.body
 
-export const authUser = asyncHandler( async (req, res) => {
-  const user = await prisma.user.findMany({
-    where: {
-      password1: 'werf'
-    }
-  })
+	const user = await prisma.user.findUnique({
+		where: {
+			email
+		}
+	})
 
-  res.json(user)
+	const isValidPassword = await verify(user.password, password)
+
+	if (user && isValidPassword) {
+		const token = generateToken(user.id)
+		res.json({ user, token })
+	} else {
+		res.status(401)
+		throw new Error('Email and password are not correct')
+	}
 })
 
 // @desc    Register user
 // @route   POST /api/auth/register
 // @access  Public
+export const registerUser = asyncHandler(async (req, res) => {
+	const { email, password } = req.body
 
-export const registerUser = asyncHandler( async (req, res) => {
+	const isHaveUser = await prisma.user.findUnique({
+		where: {
+			email
+		}
+	})
 
-  const {email, password} = req.body
+	if (isHaveUser) {
+		res.status(400)
+		throw new Error('User already exists')
+	}
 
-  const isHaveUser = await prisma.user.findUnique({
-    where: {
-      email
-    }
-  })
+	const user = await prisma.user.create({
+		data: {
+			email,
+			password: await hash(password),
+			name: faker.name.fullName()
+		},
+		select: UserFields
+	})
 
-  if (isHaveUser) {
-    req.statusCode(400)
-    throw new Error('User already exists')
-  }
+	const token = generateToken(user.id)
 
-  const user = await prisma.user.create({
-    data: {
-      email,
-      password: await hash(password),
-      name: faker.name.fullName()
-    },
-    select: UserFields
-  })
-
-  const token = generateToken(user.id)
-
-  res.json({user, token})
+	res.json({ user, token })
 })
