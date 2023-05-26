@@ -1,12 +1,24 @@
-import express from 'express';
+import express from 'express'
 
-import { protect } from '../middleware/auth.middleware.js';
+import { protect } from '../middleware/auth.middleware.js'
 
-import { createNewExercise, getExercises } from './exercise.controller.js';
+import {
+	createNewExercise,
+	deleteExercise,
+	getExercises,
+	updateExercise
+} from './exercise.controller.js'
+import { createNewExerciseLog } from './log/exercise-log.controller.js'
 
+const router = express.Router()
 
-const router = express.Router();
+router.route('/').post(protect, createNewExercise).get(protect, getExercises)
 
-router.route('/').post(protect, createNewExercise).get(protect, getExercises);
+router
+	.route('/:id')
+	.put(protect, updateExercise)
+	.delete(protect, deleteExercise)
 
-export default router;
+router.route('/log/:exerciseId').post(protect, createNewExerciseLog)
+
+export default router
