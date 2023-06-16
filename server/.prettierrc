@@ -1,17 +1,23 @@
 {
-	"trailingComma": "es5",
-	"tabWidth": 2,
-	"useTabs": true,
-	"semi": true,
-	"singleQuote": true,
-	"arrowParens": "avoid",
-	"importOrder": [
-		"<THIRD_PARTY_MODULES>",
-		"/routes/",
-		"/middleware/",
-		"^../(.*)",
-		"^./(.*)"
-	],
-	"importOrderSeparation": true,
-	"importOrderSortSpecifiers": true
+  "charset": "utf-8",
+  "endOfLine": "lf",
+  "indentSize": 2,
+  "indentStyle": "space",
+  "insertFinalNewline": true,
+  "trimTrailingWhitespace": true,
+  "trailingComma": "none",
+  "tabWidth": 2,
+  "useTabs": true,
+  "semi": false,
+  "singleQuote": true,
+  "arrowParens": "avoid",
+  "importOrder": [
+    "<THIRD_PARTY_MODULES>",
+    "/routes/",
+    "/middleware/",
+    "^../(.*)",
+    "^./(.*)"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
 }
