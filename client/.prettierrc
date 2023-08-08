@@ -1,0 +1,25 @@
+{
+  "charset": "utf-8",
+  "endOfLine": "lf",
+  "indentSize": 2,
+  "indentStyle": "space",
+  "insertFinalNewline": true,
+  "trimTrailingWhitespace": true,
+  "trailingComma": "none",
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true,
+  "arrowParens": "always",
+  "importOrder": [
+    "<THIRD_PARTY_MODULES>",
+    "/ui/",
+    "/hooks/",
+    "/screens/",
+    "/components/",
+    "^../(.)",
+    "^./(.)"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}

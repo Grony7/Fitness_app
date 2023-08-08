@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="02d8b0df-6e0f-4669-8196-cd3692811aef" name="Changes" comment="logs">
+      <change beforePath="$PROJECT_DIR$/../client/src/components/screens/home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/screens/home/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="ProjectId" id="2Pn8KxhdzhbGFgOPCpUnwsi2Tmx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.19.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.18.32&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/hg/workout-app-record/client&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;E:\\hg\\workout-app-record\\server\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\hg\workout-app-record\server" />
+      <recent name="E:\hg\workout-app-record\server\app\exercise\log" />
+      <recent name="E:\hg\workout-app-record\server\app\exercise" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="02d8b0df-6e0f-4669-8196-cd3692811aef" name="Changes" comment="" />
+      <created>1684081424236</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684081424236</updated>
+      <workItem from="1684081425452" duration="695000" />
+      <workItem from="1684709646681" duration="842000" />
+      <workItem from="1684795169918" duration="596000" />
+      <workItem from="1684837531392" duration="7297000" />
+      <workItem from="1684880742113" duration="471000" />
+      <workItem from="1684881229053" duration="1329000" />
+      <workItem from="1684938200251" duration="4181000" />
+      <workItem from="1685008712540" duration="598000" />
+      <workItem from="1685111940481" duration="599000" />
+      <workItem from="1685119909336" duration="4340000" />
+      <workItem from="1685143182431" duration="427000" />
+      <workItem from="1685194196357" duration="1216000" />
+      <workItem from="1685712893546" duration="52000" />
+      <workItem from="1688300699432" duration="629000" />
+      <workItem from="1688313599883" duration="370000" />
+      <workItem from="1691340043323" duration="582000" />
+      <workItem from="1691496237751" duration="8000" />
+    </task>
+    <task id="LOCAL-00001" summary="Adds authorization capability">
+      <created>1684854687469</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1684854687469</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Adds the ability to create exercises">
+      <created>1684942511259</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684942511259</updated>
+    </task>
+    <task id="LOCAL-00003" summary="logs">
+      <created>1685143200486</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685143200486</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Adds authorization capability" />
+    <MESSAGE value="Adds the ability to create exercises" />
+    <MESSAGE value="logs" />
+    <option name="LAST_COMMIT_MESSAGE" value="logs" />
+  </component>
+</project>
