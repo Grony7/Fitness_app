@@ -1,60 +1,47 @@
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
+import Loader from '../../ui/Loader';
+import Button from '../../ui/button/Button';
+import Field from '../../ui/field/Field';
 
-import Layout from '../../layout/Layout.jsx';
-import Loader from '../../ui/Loader.jsx';
-import Button from '../../ui/button/Button.jsx';
-import Field from '../../ui/field/Field.jsx';
+import Layout from '../../layout/Layout';
 
 import styles from './Auth.module.scss';
-
-const isLoading = false;
-const isLoadingAuth = false;
+import { useAuthPage } from './useAuthPage.js';
 
 const Auth = () => {
-  const [type, setType] = useState('auth');
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors }
-  } = useForm({
-    mode: 'onChange'
-  });
-
-  const onSubmit = (data) => {
-    console.log(data);
-  };
+  const { setType, register, handleSubmit, errors, isLoading, onSubmit } =
+    useAuthPage();
 
   return (
     <>
-      <Layout heading={'Sing in'} bgImage={'/images/auth-bg.png'} />
-      <div className={'wrapper-inner-page'}>
-        {(isLoading || isLoadingAuth) && <Loader />}
+      <Layout heading="Sign in" bgImage="/images/auth-bg.png" />
+      <div className="wrapper-inner-page">
+        {isLoading && <Loader />}
         <form onSubmit={handleSubmit(onSubmit)}>
           <Field
             error={errors?.email?.message}
-            name={'email'}
+            name="email"
             register={register}
             options={{
-              ...register('email', { required: 'Email is required' })
+              required: 'Email is required'
             }}
             type="text"
             placeholder="Enter email"
           />
+
           <Field
             error={errors?.password?.message}
-            name={'password'}
+            name="password"
             register={register}
             options={{
-              ...register('password', { required: 'Password is required' })
+              required: 'Password is required'
             }}
             type="password"
             placeholder="Enter password"
           />
+
           <div className={styles.wrapperButtons}>
-            <Button clickHandler={() => setType('auth')}>Sing in</Button>
-            <Button clickHandler={() => setType('reg')}>Sing up</Button>
+            <Button clickHandler={() => setType('login')}>Sign in</Button>
+            <Button clickHandler={() => setType('register')}>Sign up</Button>
           </div>
         </form>
       </div>

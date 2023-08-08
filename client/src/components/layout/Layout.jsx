@@ -1,23 +1,27 @@
-import cn from 'clsx'
+import cn from 'clsx';
 
-import styles from './Layout.module.scss'
-import Header from './header/Header'
+import { useCheckToken } from '../../hooks/useCheckToken.js';
+
+import styles from './Layout.module.scss';
+import Header from './header/Header';
 
 const Layout = ({ children, bgImage, heading = '', backLink = '/' }) => {
-	return (
-		<section
-			className={cn(styles.wrapper, {
-				[styles.otherPage]: !!heading
-			})}
-			style={{ backgroundImage: `url(${bgImage})` }}
-		>
-			<Header backLink={backLink} />
+  useCheckToken();
 
-			{heading && <h1 className={styles.heading}>{heading}</h1>}
+  return (
+    <section
+      className={cn(styles.wrapper, {
+        [styles.otherPage]: !!heading
+      })}
+      style={{ backgroundImage: `url(${bgImage})` }}
+    >
+      <Header backLink={backLink} />
 
-			{children && <div>{children}</div>}
-		</section>
-	)
-}
+      {heading && <h1 className={styles.heading}>{heading}</h1>}
 
-export default Layout
+      {children && <div>{children}</div>}
+    </section>
+  );
+};
+
+export default Layout;
